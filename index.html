@@ -9,116 +9,39 @@
   </head>
   <body>
     <header>
-      <h1 class="logo">YASAS PAMUDU</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skill</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-        </ul>
-      </nav>
-    </header>
-    
+        <h1 class="logo">YASAS PAMUDU</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            
+          </ul>
+        </nav>
+      </header>
       <div class="content">
       <main>
         <section id="home">
           <br><br><br><br>
-
-          <div id="slider">
-            <div class="slide">
-              <img src="slide/campaign-creators-iEiUITs149M-unsplash.jpg" alt="Image 1">
-              <div class="slide-content">
-                <h2>YASAS PAMUDU</h2>
-                <p>Welcome to my Portfolio</p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="slide/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg" alt="Image 2">
-              <div class="slide-content">
-                <h2>YASAS PAMUDU</h2>
-                <p>Undergraduate Student.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="slide/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg" alt="Image 3">
-              <div class="slide-content">
-                <h2>YASAS PAMUDU</h2>
-                <p>This is my work</p>
-              </div>
-            </div>
-          </div>
-          
-          <script>
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-          
-            function showSlide() {
-              // Hide all slides
-              for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-              }
-              // Show the current slide
-              slides[currentSlide].style.display = 'block';
-            }
-          
-            function nextSlide() {
-              currentSlide++;
-              if (currentSlide >= slides.length) {
-                currentSlide = 0;
-              }
-              showSlide();
-            }
-          
-            // Automatically advance to the next slide every 5 seconds
-            setInterval(nextSlide, 5000);
-          
-            // Show the first slide initially
-            showSlide();
-          </script>
-          
-          
-
             <h1>Welcome to my Portfolio</h1>
             <img class="round" src="img/logo.jpg" alt="Profile Picture">
             <div class="typing">
               <span class="text"></span>
               <span class="cursor"></span>
             </div>
-          
             <br>
             <p>I am an undergraduate student in the Faculty of Applied Science,<br> Rajarata University, Sri Lanka.</p>
           </section>
-        
-        <section id="about" class="about">
+
+        <section id="about">
           <h2>About</h2>
           <p>
 
             Hi. My name is Yasas Pamudu and I began using Computer since i was 11 years old. I've spent most of time working with learning computers and its behaviours.
-            <br></p>
-
-                    <button id="toggleButton">Read More</button>
-                    <div id="additionalInfo" style="display: none;">
-                    <p><br>As an undergraduate student, creating a portfolio site can be a valuable way to showcase your skills, experiences, and achievements to potential employers, clients, or graduate schools. My portfolio site reflect my unique brand and personality, and feature my best work samples in a clear and organized manner. </p>
-                    
-                    </div>
-
-                    <script>
-                      const toggleButton = document.getElementById('toggleButton');
-                      const additionalInfo = document.getElementById('additionalInfo');
-
-                      toggleButton.addEventListener('click', function() {
-                        if (additionalInfo.style.display === 'none') {
-                          additionalInfo.style.display = 'block';
-                          toggleButton.textContent = 'Hide';
-                        } else {
-                          additionalInfo.style.display = 'none';
-                          toggleButton.textContent = 'Show More';
-                        }
-                      });
-                    </script>
-
-           <br><br>
+            <br><br>
+            As an undergraduate student, creating a portfolio site can be a valuable way to showcase your skills, experiences, and achievements to potential employers, clients, or graduate schools. My portfolio site reflect my unique brand and personality, and feature my best work samples in a clear and organized manner.
+            </p>
 
             <div class="grid-container">
                 <div class="grid-item">
@@ -174,7 +97,7 @@
     <h2>Portfolio</h2>
     <div class="container">
         <div class="item">
-            <a href="https://ruslfas2019.eu.org" target="_blank">
+            <a href="https://ruslfas2019.us.eu.org" target="_blank">
               <img src="img/ruslfas2019.us.eu.org.png" alt="RUSLFAS2019 LOGO">
             </a>
             <div class="caption">
@@ -194,7 +117,7 @@
           </div>
 
           <div class="item">
-            <a href="https://github.com/asp2020100/tg-notification-bot" target="_blank">
+            <a href="http://t.me/ruslfas2019chatbot" target="_blank">
               <img src="img/bot.png" alt="RUSLFAS2019 LOGO">
             </a>
             <div class="caption">
@@ -235,87 +158,6 @@
          
   </section>
   
-  <section id="contact">
-    <h2>Contact Me</h2>
- 
-    <form id="my-form" class="contact-form" action="https://formspree.io/f/xdovrabz" method="POST">
-      <label>Email:</label>
-      <input type="email" name="email" required />
-      <label>Message:</label>
-      <textarea name="message" required></textarea>
-      <button id="my-form-button">Submit</button>
-      <p id="my-form-status"></p>
-    </form>
-    <!-- Place this script at the end of the body tag -->
-    <script>
-      var form = document.getElementById("my-form");
-      var emailInput = document.querySelector('input[name="email"]');
-      var messageInput = document.querySelector('textarea[name="message"]');
-      var status = document.getElementById("my-form-status");
-    
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        if (validateForm()) {
-          submitForm();
-        }
-      });
-    
-      function validateForm() {
-        var isValid = true;
-    
-        if (!emailInput.checkValidity()) {
-          isValid = false;
-          displayErrorMessage("Please enter a valid email address.");
-        }
-    
-        if (messageInput.value.trim() === "") {
-          isValid = false;
-          displayErrorMessage("Please enter a message.");
-        }
-    
-        return isValid;
-      }
-    
-      function displayErrorMessage(message) {
-        status.textContent = message;
-        status.style.color = "red";
-      }
-    
-      function submitForm() {
-        status.textContent = "Sending...";
-        status.style.color = "black";
-    
-        var data = new FormData(form);
-        fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        })
-          .then(function (response) {
-            if (response.ok) {
-              status.textContent = "Thanks for your submission!";
-              form.reset();
-            } else {
-              response.json().then(function (data) {
-                if (data && data.errors) {
-                  displayErrorMessage(data.errors[0].message);
-                } else {
-                  displayErrorMessage("Oops! There was a problem submitting your form.");
-                }
-              });
-            }
-          })
-          .catch(function (error) {
-            displayErrorMessage("Oops! There was a problem submitting your form.");
-          });
-      }
-    </script>
-
-  </section>
-
-
       </main>
     </div>
       
@@ -324,10 +166,9 @@
       
       <ul>
         
-        <li><a href="Assignment 04-3.pdf"> <i class="fas fa-file-pdf"></i> COM2303 Assignment 04</a></li>
+        <li><a href="https://github.com/asp2020100/portfolio/blob/9f6bc9fc45bbf575d2e0004e53984b7dca2dc068/Assignment%2002-3.pdf"> <i class="fas fa-file-pdf"></i> COM2303 Assignment 02</a></li>
         <li><a href="https://pages.cloudflare.com/"><i class="fab fa-cloudflare"></i> Cloudflare Pagers</a></li>
-        <li><a href="https://github.com/asp2020100/COM-2303-Assignment-04"><i class="fab fa-github"></i> Github Project</a></li>
-        <li><a href="admin/"><i class="fas fa-user"></i> Login</a></li>
+        <li><a href="https://github.com/asp2020100/COM-2303-Assignment-02"><i class="fab fa-github"></i> Github Project</a></li>
       </ul>
     </aside>
     <br> <br> <br> <br> <br>
@@ -344,7 +185,7 @@
       <p><i class="fas fa-map-marker-alt"></i> Stage 3, Anuradhapura, Sri Lanka</p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:asp2020100@as.rjt.ac.lk">asp2020100@as.rjt.ac.lk</a> </p>
       <p><i class="fas fa-phone"></i> <a href="tel:+94786524267"> +94 78 652 4267 </a></p>
-      <p>© 2023 | <a href="https://com-2303-assignment-03.pages.dev/">ASP2020100</a>.</p>
+      <p>© 2023 | <a href="https://asp2020100.pages.dev/">asp2020100.pages.dev</a>.</p>
     </footer>
 
     <script src="script.js"></script>
