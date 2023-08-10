@@ -34,3 +34,29 @@ function erase() {
 
 // Start the typing effect
 type();
+
+// Add smooth scrolling to navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Get all the portfolio items with the "hover-effect" class
+const portfolioItems = document.querySelectorAll('.hover-effect');
+
+// Add event listeners for mouseenter and mouseleave events
+portfolioItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    // Add a class to apply the hover effect
+    item.classList.add('hovered');
+  });
+
+  item.addEventListener('mouseleave', () => {
+    // Remove the class to remove the hover effect
+    item.classList.remove('hovered');
+  });
+});
